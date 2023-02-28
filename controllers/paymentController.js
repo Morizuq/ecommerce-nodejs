@@ -7,8 +7,8 @@ exports.initPayment = catchAsync(async (req, res, next) => {
   const product = await Product.findById(req.params.productId);
 
   const amount = product.price * 100;
-  // const email = req.user.email;
-  const email = 'testing@test.com';
+  const email = req.user.email;
+  // const email = 'testing@test.com';
   const callbackUrl = `${req.protocol}://${req.get('host')}/callback`;
 
   const initializeResponse = await paystack.transaction.initialize({
