@@ -12,7 +12,7 @@ process.on('uncaughtException', (err) => {
 const connectDB = require('./config/connect');
 const products = require('./router/productsRoute');
 const users = require('./router/usersRoute');
-const bookings = require('./router/bookingRoute');
+const bookings = require('./router/paymentRoute');
 const globalAppErrorHandler = require('./controllers/errorController');
 
 const port = process.env.PORT || 3001;
