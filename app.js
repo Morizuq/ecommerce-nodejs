@@ -15,7 +15,7 @@ const users = require('./router/usersRoute');
 const bookings = require('./router/paymentRoute');
 const globalAppErrorHandler = require('./controllers/errorController');
 
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3000;
 
 //View engine setup
 app.set('view engine', 'pug');
