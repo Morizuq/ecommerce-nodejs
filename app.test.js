@@ -1,7 +1,6 @@
 const request = require('supertest');
 const app = require('express');
 
-
 //Ancestor Test functions
 const testGetAll = (url) => {
   return it('respond with an array of products', async () => {
@@ -75,4 +74,17 @@ describe('Products', () => {
   testUpdateOne('/api/v1/products/:id');
   //Test for the delete one product endpoint
   testDeleteOne('/api/v1/products/:id');
+});
+
+describe('Users', () => {
+  //Test for the get all user endpoint
+  testGetAll('/api/v1/users/');
+  //Test for the signup user endpoint
+  testCreate('api/v1/users/signup');
+  //Test for the get one user endpoint
+  testGetOne('/api/v1/users/:id');
+  //Test for the update one product endpoint
+  testUpdateOne('/api/v1/users/updateMe');
+  //Test for the delete one product endpoint
+  testDeleteOne('/api/v1/users/:id');
 });
